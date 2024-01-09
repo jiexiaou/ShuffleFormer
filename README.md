@@ -3,12 +3,13 @@
 
 Paper: [Link](https://proceedings.mlr.press/v202/xiao23a/xiao23a.pdf)
 ## Method Overview
-![ShuffleFormer](figs/method.png)
+<img src="figs/method.png" width="70%" height="auto">
+
 ## Training Strategy
-![train](figs/train.png)
+<img src="figs/train.png" width="70%" height="auto">
 
 ## Testing Strategy
-![test](figs/test.png)
+<img src="figs/test.png" width="70%" height="auto">
 
 ## Pretrained Model
 - SIDD [Google Drive](https://drive.google.com/file/d/1rK_fwwz70DBoYIR-KqBLB14qC_cXegQD/view?usp=sharing)
