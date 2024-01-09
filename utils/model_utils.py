@@ -53,6 +53,7 @@ def load_optim(optimizer, weights):
     for p in optimizer.param_groups: lr = p['lr']
     return lr
 
+
 def get_arch(opt):
     from model import Uformer, UNet
     from shuffleformer import ShuffleFormer

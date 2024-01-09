@@ -135,22 +135,6 @@ val_loader = DataLoader(dataset=val_dataset, batch_size=1, shuffle=False,
 len_trainset = train_dataset.__len__()
 len_valset = val_dataset.__len__()
 print("Sizeof training set: ", len_trainset, ", sizeof validation set: ", len_valset)
-######### validation ###########
-#with torch.no_grad():
-#    model_restoration.eval()
-#    psnr_dataset = []
-#    psnr_model_init = []
-#    for ii, data_val in enumerate(tqdm(val_loader), 0):
-#        target = data_val[0].cuda()
-#        input_ = data_val[1].cuda()
-#        with torch.cuda.amp.autocast():
-#            restored = model_restoration(input_)
-#            restored = torch.clamp(restored, 0, 1)
-#        psnr_dataset.append(utils.batch_PSNR(input_, target, False).item())
-#        psnr_model_init.append(utils.batch_PSNR(restored, target, False).item())
-#    psnr_dataset = sum(psnr_dataset) / len_valset
-#    psnr_model_init = sum(psnr_model_init) / len_valset
-#    print('Input & GT (PSNR) -->%.4f dB' % (psnr_dataset), ', Model_init & GT (PSNR) -->%.4f dB' % (psnr_model_init))
 
 ######### train ###########
 print('===> Start Epoch {} End Epoch {}'.format(start_epoch, opt.nepoch))
